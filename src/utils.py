@@ -46,5 +46,5 @@ def simplify_large_onnx(in_model_path, out_dir="./onnx/"):
         in_onnx_name = "onnx_simplified"
     else:
         in_onnx_name = in_onnx_name + "_simplified"
-    out_model_path = out_dir + '/' in_onnx_name + ".onnx"
+    out_model_path = out_dir + '/' + in_onnx_name + ".onnx"
     _simplify_large_onnx(in_model_path, out_model_path)
