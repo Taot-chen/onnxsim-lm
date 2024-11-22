@@ -1,4 +1,4 @@
-from onnxsim-lm.utils import simplify_large_onnx
+from onnxsimlm.utils import simplify_large_onnx
 import argparse
 
 def run() -> None:

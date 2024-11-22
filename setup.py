@@ -12,7 +12,7 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'onnxsim-lm'
+NAME = 'onnxsimlm'
 DESCRIPTION = 'enable onnxsim while modelproto/tensorproto is lagger than 2GB'
 URL = 'https://github.com/Taot-chen/onnxsim-lm'
 EMAIL = 'oehuosi@qq.com'
@@ -95,7 +95,7 @@ class UploadCommand(Command):
 
 # Where the magic happens:
 packages = \
-    ["onnxsim-lm"]
+    ["onnxsimlm"]
 
 package_data = \
     {"": ["*"]}
@@ -115,7 +115,7 @@ setup(
     # packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     # If your package is a single module, use this instead of 'packages':
     entry_points={
-        'console_scripts': ['onnxsim-lm = onnxsim-lm.main:run'],
+        'console_scripts': ['onnxsimlm = onnxsimlm.main:run'],
     },
     install_requires=REQUIRED,
     extras_require=EXTRAS,

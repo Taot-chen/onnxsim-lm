@@ -1,5 +1,5 @@
-from onnx_utils import set_onnx_input_shape
-from compress_model import compress_onnx_model, uncompress_onnx_model
+from onnxsimlm.onnx_utils import set_onnx_input_shape
+from onnxsimlm.compress_model import compress_onnx_model, uncompress_onnx_model
 from onnxsim import simplify
 import os
 import onnx
