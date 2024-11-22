@@ -95,7 +95,7 @@ class UploadCommand(Command):
 
 # Where the magic happens:
 packages = \
-    ["src"]
+    ["onnxsim-lm"]
 
 package_data = \
     {"": ["*"]}
@@ -115,7 +115,7 @@ setup(
     # packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     # If your package is a single module, use this instead of 'packages':
     entry_points={
-        'console_scripts': ['onnxsim-lm = src.main:run'],
+        'console_scripts': ['onnxsim-lm = onnxsim-lm.main:run'],
     },
     install_requires=REQUIRED,
     extras_require=EXTRAS,
