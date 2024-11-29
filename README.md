@@ -14,8 +14,39 @@
 
 该仓库对上面的方案进行了实现，并发布了相应的 python package。
 
-## 1 使用方法
+## 1 安装
 
-### 1.1 命令行调用
+可以直接通过`pip`安装：
+```bash
+pip install onnxsim-lm
+```
 
-### 1.2 python 调用
+也可以通过源码安装：
+```bash
+# clone 代码
+git clone https://github.com/Taot-chen/onnxsim-lm.git
+cd onnxsim-lm
+python3 setup.py bdist_wheel --universal
+python3 -m pip install ./dist/*.whl
+```
+
+
+## 2 使用
+
+### 2.1 命令行调用
+
+```bash
+onnxsimlm --help
+
+# --onnx_input and --out_dir shuld end with .onnx
+onnxsimlm --onnx_input=/path/to/input_onnx --out_dir=/path/to/output_onnx
+```
+
+### 2.2 python api 调用
+
+```bash
+import onnxsimlm
+in_onnx = "examples/example.onnx"
+out_dir = "test_out"
+onnxsimlm.utils.simplify_large_onnx(in_onnx, out_dir)
+```
