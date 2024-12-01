@@ -10,7 +10,7 @@ chmod +x download_chatglm2_6b.sh
 
 
 
-## 2 转 onnx
+## 2 转 onnx & onnxsim
 
 ```bash
 python3 export_torch2onnx.py --torch_model=/path/to/chatglm2_6b_path/ --seq_len=128 --block_num=1 --batch_size=1 --iteration=0 --out_dir=./onnx/
